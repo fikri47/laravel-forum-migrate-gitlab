@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>PKS DigiSchool | Forum Diskusi</title>
+    <title>Forum Diskusi</title>
 
 
     <!-- ===============================================-->
@@ -34,6 +34,7 @@
     <link href="{{ asset('boldo/vendors/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
     <link href="{{ asset('boldo/assets/css/theme.css') }}" rel="stylesheet" />
     <link href="{{ asset('boldo/assets/css/user.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   </head>
 
@@ -45,7 +46,10 @@
     <!-- ===============================================-->
     <main class="main" id="top">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="{{ asset('boldo/assets/img/Logo.png') }}" alt="" /></a>
+        <div class="container"><a class="navbar-brand" href="index.html">
+          <h2 class="text-white fw-bold"><i class="bi bi-chat-dots"></i> FOURDI</h2>
+          <!-- <img src="{{ asset('boldo/assets/img/Logo.png') }}" alt="" /> -->
+        </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars text-white fs-3"></i></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
@@ -68,20 +72,32 @@
                 <h1 class="text-white fs-5 fs-xl-6 fw-bold">Habis Gelap Terbitlah Terang.</h1>
                 <p class="text-white py-lg-3 py-2">Brainly adalah tempat berbagi ilmu ratusan juta siswa dan pakar edukasi, belajar bersama untuk menyelesaikan soal-soal yang paling rumit sekalipun.</p>
                 <div class="d-sm-flex align-items-center gap-3">
-                  <button class="btn btn-outline-light mb-3">Ajukan Pertanyaan?</button>
+                  <div class="col-auto w-100 w-lg-50">
+                    <input class="form-control mb-2 border-light fs-1" type="email" placeholder="Ajukan Pertanyaanmu?" />
+                  </div>
+                  <div class="col-auto mt-2 mt-lg-0">
+                    <button class="btn btn-success text-dark fs-1"><i class="bi bi-search"></i></button>
+                  </div>                  
                 </div>
               </div>
               <div class="col-lg-6 text-center text-lg-end mt-3 mt-lg-0"><img class="img-fluid" src="{{ asset('boldo/assets/img/hero/hero-graphics.png') }}" alt="" /></div>
             </div>
             <div class="swiper">
               <div class="swiper-container swiper-shadow swiper-theme" data-swiper='{"slidesPerView":2,"breakpoints":{"640":{"slidesPerView":2,"spaceBetween":20},"768":{"slidesPerView":4,"spaceBetween":40},"992":{"slidesPerView":5,"spaceBetween":40},"1024":{"slidesPerView":4,"spaceBetween":50},"1025":{"slidesPerView":6,"spaceBetween":50}},"spaceBetween":10,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"loop":true,"freeMode":true,"autoplay":{"delay":2500,"disableOnInteraction":false}}'>
+                <!-- Loop dari kategori -->
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide text-center"><img src="{{ asset('boldo/assets/img/logos/boldo.png') }}" alt="" /></div>
+                  <div class="swiper-slide text-center text-white">MATEMATIKA</div>
+                  <div class="swiper-slide text-center text-white">SBMPTN</div>
+                  <div class="swiper-slide text-center text-white">BIOLOGI</div>
+                  <div class="swiper-slide text-center text-white">AKUNTANSI</div>
+                  <div class="swiper-slide text-center text-white">KIMIA</div>
+                  <div class="swiper-slide text-center text-white">SEJARAH</div>
+                  <!-- <div class="swiper-slide text-center"><img src="{{ asset('boldo/assets/img/logos/boldo.png') }}" alt="" /></div>
                   <div class="swiper-slide text-center"><img src="{{ asset('boldo/assets/img/logos/presto.png') }}" alt="" /></div>
                   <div class="swiper-slide text-center"><img src="{{ asset('boldo/assets/img/logos/boldo.png') }}" alt="" /></div>
                   <div class="swiper-slide text-center"><img src="{{ asset('boldo/assets/img/logos/presto.png') }}" alt="" /></div>
                   <div class="swiper-slide text-center"><img src="{{ asset('boldo/assets/img/logos/boldo.png') }}" alt="" /></div>
-                  <div class="swiper-slide text-center"><img src="{{ asset('boldo/assets/img/logos/presto.png') }}" alt="" /></div>
+                  <div class="swiper-slide text-center"><img src="{{ asset('boldo/assets/img/logos/presto.png') }}" alt="" /></div> -->
                 </div>
               </div>
             </div>
@@ -125,75 +141,20 @@
       <!-- ============================================-->
 
 
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section>
-
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 text-center text-lg-start"><img class="img-fluid" src="{{ asset('boldo/assets/img/offer/1.png') }}" alt="" /></div>
-            <div class="col-lg-6">
-              <h1 class="fs-xl-5 fs-lg-4 fs-3">We connect our customers with the best, and help them keep up-and stay open.</h1>
-              <ul class="list-unstyled my-xl-5 my-3">
-                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>We connect our customers with the best.</span></li>
-                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Advisor success customer launch party.</span></li>
-                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Business-to-consumer long tail.</span></li>
-              </ul>
-              <button class="btn btn-dark">Start now</button>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="pt-8 pt-lg-0">
-
-        <div class="container">
-          <div class="d-flex flex-column-reverse flex-lg-row">
-            <div class="col-lg-6">
-              <h1 class="fs-lg-4 fs-md-3 fs-xl-5 mb-5">We connect our customers with the best, and help them keep up-and stay open.</h1>
-              <ul class="list-unstyled">
-                <li class="fs-2 shadow-sm offer-list-item"><i class="fa-solid fa-leaf fs-lg-4 fs-3"></i><span>We connect our customers with the best.</span></li>
-                <li class="fs-2 shadow-sm offer-list-item"><i class="fa-solid fa-eye fs-lg-4 fs-3"></i><span>Advisor success customer launch party.</span></li>
-                <li class="fs-2 shadow-sm offer-list-item"><i class="fa-solid fa-sun fs-lg-4 fs-3"></i><span>Business-to-consumer long tail.</span></li>
-              </ul>
-            </div>
-            <div class="col-lg-6 text-center text-lg-end"><img class="img-fluid" src="{{ asset('boldo/assets/img/offer/2.png') }}" alt="" /></div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-
-
       <!-- ============================================-->
       <!-- <section> begin ============================-->
       <section class="bg-dark pt-6">
 
         <div class="container">
           <div class="col-md-6">
-            <h1 class="text-white fs-lg-5 fs-md-3 fs-2">An enterprise template to ramp up your company website</h1>
+            <h1 class="text-white fs-lg-5 fs-md-3 fs-2">Pertanyaan Paling Banyak ditanyakan!</h1>
           </div>
           <div class="swiper mt-7">
             <div class="swiper-container swiper-theme" data-swiper='{"slidesPerView":1,"breakpoints":{"640":{"slidesPerView":1,"spaceBetween":10},"768":{"slidesPerView":2,"spaceBetween":20},"1025":{"slidesPerView":3,"spaceBetween":40}},"spaceBetween":10,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"navigation":{"nextEl":".swiper-button-next","prevEl":".swiper-button-prev"},"loop":true,"freeMode":true,"loopedSlides":3}'>
               <div class="swiper-wrapper">
                 <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
                   <div class="d-flex flex-column justify-content-between h-100">
-                    <h4 class="text-black">“Buyer buzz partner network disruptive non-disclosure agreement business”</h4>
+                    <h4 class="text-black">Bagaiamana cara menggunakan Collab Gitlab?</h4>
                     <div class="d-flex align-items-center gap-3 mt-5"><img src="{{ asset('boldo/assets/img/review/1.png') }}" alt="" />
                       <div class="text-black">
                         <p class="mb-0 fw-bold text-dark">Albus Dumbledore</p><small>Manager @ Howarts</small>
@@ -203,7 +164,7 @@
                 </div>
                 <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
                   <div class="d-flex flex-column justify-content-between h-100">
-                    <h4 class="text-black">“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”</h4>
+                    <h4 class="text-black">Cara mengambil uang di ATM supaya ndak ketelen kartunya?</h4>
                     <div class="d-flex align-items-center gap-3 mt-5"><img src="{{ asset('boldo/assets/img/review/1.png') }}" alt="" />
                       <div class="text-black">
                         <p class="mb-0 fw-bold text-dark">Severus Snape</p><small>Manager @ Slytherin</small>
@@ -213,7 +174,7 @@
                 </div>
                 <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
                   <div class="d-flex flex-column justify-content-between h-100">
-                    <h4 class="text-black">“Release facebook responsive web design business model canvas seed money monetization.”</h4>
+                    <h4 class="text-black">Cara mengolah Daun Pepaya supaya tidak Pahit?</h4>
                     <div class="d-flex align-items-center gap-3 mt-5"><img src="{{ asset('boldo/assets/img/review/2.png') }}" alt="" />
                       <div class="text-black">
                         <p class="mb-0 fw-bold text-dark">Harry Potter</p><small>Team Leader @ Gryffindor</small>
@@ -223,7 +184,7 @@
                 </div>
                 <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
                   <div class="d-flex flex-column justify-content-between h-100">
-                    <h4 class="text-black">“Buyer buzz partner network disruptive non-disclosure agreement business”</h4>
+                    <h4 class="text-black">Diketahui vektor a = 4i - 2j +2k dan vektor b = 2i - 6j + 4k. proyeksi orthogonal vektor b pada vektor a adalah?</h4>
                     <div class="d-flex align-items-center gap-3 mt-5"><img src="{{ asset('boldo/assets/img/review/3.png') }}" alt="" />
                       <div class="text-black">
                         <p class="mb-0 fw-bold text-dark">Albus Dumbledore</p><small>Manager @ Howarts</small>
@@ -243,58 +204,13 @@
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
-
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section>
-
-        <div class="container"><img class="img-fluid" src="{{ asset('boldo/assets/img/offer/3.png') }}" alt="" />
-          <div class="row mt-5 align-items-center">
-            <div class="col-md-6">
-              <h2 class="fs-md-4 fs-3 pt-3">We connect our customers with the best, and help them keep up-and stay open.</h2>
-            </div>
-            <div class="col-md-6">
-              <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item"></div>
-                <h2 class="accordion-header border-bottom" id="srgdgfdgdgg45">
-                  <button class="accordion-button collapsed text-black" type="button" data-bs-toggle="collapse" data-bs-target="#srgdgfdgdgg45tyuu" aria-expanded="false" aria-controls="srgdgfdgdgg45"><span class="fs-1 pe-3">We connect our customers with the best?</span></button>
-                </h2>
-                <div class="accordion-collapse collapse" aria-labelledby="srgdgfdgdgg45" data-bs-parent="#accordionFlushExample" id="srgdgfdgdgg45tyuu">
-                  <div class="accordion-body">
-                    <p class="mb-0">Placeholder content for this accordion, which is intended to demonstrate the accordion-flush class. This is the first item's accordion body.</p>
-                  </div>
-                </div>
-                <div class="accordion-item"></div>
-                <h2 class="accordion-header border-bottom" id="sxvdgrfhfh276">
-                  <button class="accordion-button collapsed text-black" type="button" data-bs-toggle="collapse" data-bs-target="#srgdgfdgdgg45tyuu5ghj" aria-expanded="false" aria-controls="sxvdgrfhfh276"><span class="fs-1 pe-3">Android research &amp; development rockstar? </span></button>
-                </h2>
-                <div class="accordion-collapse collapse" aria-labelledby="sxvdgrfhfh276" data-bs-parent="#accordionFlushExample" id="srgdgfdgdgg45tyuu5ghj">
-                  <div class="accordion-body">
-                    <p class="mb-0">Placeholder content for this accordion, which is intended to demonstrate the accordion-flush class. This is the first item's accordion body.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-
-
       <!-- ============================================-->
       <!-- <section> begin ============================-->
       <section class="pb-0">
 
         <div class="container">
-          <p class="text-center text-gray fs-1">Our Blog</p>
-          <h2 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75">Value proposition accelerator product management venture</h2>
+          <p class="text-center text-gray fs-1">Testimonial</p>
+          <h2 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75">Apa kata mereka yang telah menggunakan Fourdi?</h2>
           <div class="row mt-7 gx-xl-7">
             <div class="col-md-4 text-center text-md-start h-auto mb-5">
               <div class="d-flex justify-content-between flex-column h-100"><a href="#"><img class="w-75 w-md-100 rounded-2" src="{{ asset('boldo/assets/img/blog/1.png') }}" alt="" /></a>
@@ -368,13 +284,11 @@
         <!--/.bg-holder-->
 
         <div class="px-5 py-7 position-relative">
-          <h1 class="text-center w-lg-75 mx-auto fs-lg-6 fs-md-4 fs-3 text-white">An enterprise template to ramp up your company website</h1>
+          <h1 class="text-center w-lg-75 mx-auto fs-lg-6 fs-md-4 fs-3 text-white">Apa yang perlu kamu ketahui?</h1>
+          <p class="text-center text-white">Saat kamu kesusahan mencari jawaban atas pertanyaanmu, tidak ada pertanyaan yang tidak bisa ditemukan solusinya di Fourdi!</p>
           <div class="row justify-content-center mt-5">
-            <div class="col-auto w-100 w-lg-50">
-              <input class="form-control mb-2 border-light fs-1" type="email" placeholder="Your email address" />
-            </div>
             <div class="col-auto mt-2 mt-lg-0">
-              <button class="btn btn-success text-dark fs-1">Start now</button>
+              <button class="btn btn-success text-dark fs-1">Ajukan Pertanyaanmu?</button>
             </div>
           </div>
         </div>
