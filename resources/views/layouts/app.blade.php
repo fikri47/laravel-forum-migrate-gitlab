@@ -15,8 +15,42 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        .form-signin {
+        /* max-width: 330px; */
+        padding: 1rem;
+        }
+
+        .form-signin .form-floating:focus-within {
+        z-index: 2;
+        }
+
+        .form-login input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        }
+        
+        .form-login input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        }
+        
+        .form-registration input{
+            border-radius: 0;
+            margin-bottom: -1px;
+        }
+    </style>
+
 </head>
 <body>
+    
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -72,9 +106,13 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <main class="py-4">
+                    @yield('content')
+                </main>
+            </div>
+        </div>
     </div>
 </body>
 </html>
