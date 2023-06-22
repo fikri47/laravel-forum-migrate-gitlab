@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Profile extends Model
 {
     use HasFactory;
-
+        
     protected $fillable = [
         "avatar",
         "age",
@@ -17,7 +17,7 @@ class Profile extends Model
         "user_id"];
 
     public function user() {
-        $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function getAvatar() {
