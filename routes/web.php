@@ -17,3 +17,10 @@ Route::get('/', function(){
     return view('halaman.home');
 });
 
+Route::get('/', function(){
+    return view('halaman.home');
+});
+
+Route::get('/profile', function(){
+    return view('halaman.profile');
+});
