@@ -70,7 +70,7 @@
             <div class="row align-items-center py-lg-8 py-6">
               <div class="col-lg-6 text-center text-lg-start">
                 <h1 class="text-white fs-5 fs-xl-6 fw-bold">Habis Gelap Terbitlah Terang.</h1>
-                <p class="text-white py-lg-3 py-2">Brainly adalah tempat berbagi ilmu ratusan juta siswa dan pakar edukasi, belajar bersama untuk menyelesaikan soal-soal yang paling rumit sekalipun.</p>
+                <p class="text-white py-lg-3 py-2">Fourdi adalah tempat berbagi ilmu ratusan juta siswa dan pakar edukasi, belajar bersama untuk menyelesaikan soal-soal yang paling rumit sekalipun.</p>
                 <div class="d-sm-flex align-items-center gap-3">
                   <div class="col-auto w-100 w-lg-50">
                     <input class="form-control mb-2 border-light fs-1" type="email" placeholder="Ajukan Pertanyaanmu?" />
