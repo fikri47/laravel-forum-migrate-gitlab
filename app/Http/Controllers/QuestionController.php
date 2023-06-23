@@ -20,10 +20,10 @@ class QuestionController extends Controller
         $this->middleware('auth')->except(['getAll']);
      }
 
-    // public function getAll() {
-    //     $question = Question::orderBy('created_at', 'DESC')->get();
-    //     return view('index-film', compact('question'));
-    // }
+    public function getAll() {
+        $question = Question::orderBy('created_at', 'DESC')->get();
+        return view('home.index', compact('question'));
+    }
 
     public function index()
     {

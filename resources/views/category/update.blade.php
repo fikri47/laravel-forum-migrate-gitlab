@@ -22,11 +22,12 @@ Category
             </div>
             <div class="card-body">
                 
-                <form action="/category/create" method="post">
+                <form action="/category/{{$category->id}}" method="POST">
                     @csrf
+                    @method('PUT')
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Category Name</label>
-                        <input type="text" class="form-control" value="" id="name"  name="name" aria-describedby="emailHelp" placeholder="Category Name" autofocus>
+                        <label for="name">Category Name</label>
+                        <input type="text" class="form-control" value="{{$category->name}}" id="name"  name="name" aria-describedby="emailHelp" placeholder="Category Name" autofocus>
                         @error('name')
                         <small id="emailHelp" class="form-text text-muted">
                             {{ $message }}

@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         $category = Category::all();
-        return view('', compact('category'));        
+        return view('category.index', compact('category'));        
     }
 
     /**
@@ -25,7 +25,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('');
+        return view('category.create');
     }
 
     /**
@@ -44,7 +44,7 @@ class CategoryController extends Controller
             'name' => $request->name,   
         ]);
 
-        return redirect('');
+        return redirect('category');
     }
 
     /**
@@ -56,7 +56,7 @@ class CategoryController extends Controller
     public function show($id)
     {
         $category = Category::find($id);
-        return view('');
+        return view('category.show', ['category'=>$category]);
     }
 
     /**
@@ -68,7 +68,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::find($id);
-        return view('');
+        return view('category.update', compact('category'));
     }
 
     /**
@@ -85,10 +85,10 @@ class CategoryController extends Controller
         ]);
 
         $category = Category::find($id);
-        $category-> name = $request->name;
+        $category->name = $request->name;
         $category->update();
 
-        return redirect('');
+        return redirect('category');
     }
 
     /**
