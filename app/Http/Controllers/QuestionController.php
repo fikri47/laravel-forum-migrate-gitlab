@@ -15,6 +15,16 @@ class QuestionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct() {
+        $this->middleware('auth')->except(['getAll']);
+     }
+
+    // public function getAll() {
+    //     $question = Question::orderBy('created_at', 'DESC')->get();
+    //     return view('index-film', compact('question'));
+    // }
+
     public function index()
     {
         $user = Auth::id();
