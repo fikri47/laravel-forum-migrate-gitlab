@@ -22,7 +22,7 @@ Add New Category
             </div>
             <div class="card-body">
                 
-                <form action="/category/create" method="post">
+                <form action="/category" method="post">
                     @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Category Name</label>

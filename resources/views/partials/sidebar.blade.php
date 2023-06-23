@@ -10,6 +10,16 @@
               </p>
             </a>
           </li>
+          @auth            
+          <li class="nav-item">
+            <a href="/profile" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Profile
+              </p>
+            </a>            
+          </li>
+          @endauth
           <li class="nav-item">
             <a href="/category" class="nav-link {{ ($active === 'category') ? 'active' : '' }}">
               <i class="nav-icon fas fa-th"></i>

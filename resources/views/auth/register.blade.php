@@ -8,7 +8,7 @@
   <form method="POST" action="{{ route('register') }}">
     @csrf
     
-    <div class="form-floating">
+    <div class="form-floating mb-3">
       <input type="text" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" placeholder="name@example.com" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
       <label for="name">{{ __('Full Name') }}</label>
       @error('name')
@@ -18,7 +18,7 @@
       @enderror
     </div>
 
-    <div class="form-floating">
+    <div class="form-floating mb-3">
       <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
       <label for="email">{{ __('Email Address') }}</label>
       @error('email')
@@ -27,12 +27,38 @@
         </span>
       @enderror
     </div>
+
+    <div class="form-floating mb-3">
+      <input type="number" class="form-control @error('age') is-invalid @enderror" id="age" placeholder="Masukan Age" name="age" value="{{ old('age') }}" required autocomplete="age" autofocus>
+      <label for="age">{{ __('Age') }}</label>
+      @error('age')        
+          <strong>{{ $message }}</strong>        
+      @enderror
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" placeholder="Masukan Address" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
+      <label for="address">{{ __('Address') }}</label>
+      @error('address')
+       <strong>{{ $message }}</strong>
+        
+      @enderror
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control @error('bio') is-invalid @enderror" id="bio" placeholder="Masukan bio" name="bio" value="{{ old('bio') }}" required autocomplete="bio" autofocus>
+      <label for="bio">{{ __('bio') }}</label>
+      @error('bio')
+       <strong>{{ $message }}</strong>
+        
+      @enderror
+    </div>
     
-    <div class="form-floating">
+    <div class="form-floating mb-3">
       <input type="password" class="form-control" id="password" name="password" placeholder="Password" required autocomplete="new-password">
       <label for="password">{{ __('Password') }}</label>            
     </div>
-    <div class="form-floating">
+    <div class="form-floating mb-3">
       <input type="password" class="form-control rounded-bottom" id="password" name="password_confirmation" placeholder="Password" required required autocomplete="new-password">
       <label for="password">{{ __('Confirm Password') }}</label>            
     </div>
