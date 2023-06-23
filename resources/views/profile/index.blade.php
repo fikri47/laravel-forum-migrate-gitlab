@@ -1,7 +1,7 @@
 @extends('dashboard.main')
 
 @section('title')
-Halaman Utama
+Profile Pages
 @endsection
 
 @section('content')
