@@ -22,7 +22,7 @@ Profile Pages
 
                 <p class="text-muted text-center">Software Engineer</p>
 
-                <a href="#" class="btn btn-primary btn-block"><b>Changed Picture</b></a>
+                <a href="#" class="btn btn-primary btn-block"><b>Change Picture</b></a>
               </div>
               <!-- /.card-body -->
             </div>
