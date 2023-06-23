@@ -18,7 +18,7 @@ class ProfileController extends Controller
         
 
         $detailProfile = Profile::where('user_id', $idUser)->first();
-        return view('', ['detailProfile' => $detailProfile]);
+        return view('profile.index', ['detailProfile' => $detailProfile]);
     }
 
     public function update(Request $request, $id) {           
@@ -45,7 +45,7 @@ class ProfileController extends Controller
         $profile -> age = $request->age;
         $profile -> bio = $request->bio;
         $profile -> address = $request->address;
-        $profile->update();                
+        $profile->update();        
 
         return redirect('profile');
 

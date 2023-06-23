@@ -8,9 +8,9 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{asset('/template/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('/admin/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('/template/dist/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{asset('/admin/dist/css/adminlte.min.css')}}">
 </head>
 @stack('styles')
 
@@ -26,7 +26,7 @@
     <!-- Brand Logo -->
     <a href="../../index3.html" class="brand-link">
       <img src="{{asset('admin/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">AdminLTsE 3</span>
     </a>
 
     <!-- Sidebar -->
@@ -34,7 +34,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('image/user.png')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="/profile" class="d-block">User Profile</a>
@@ -42,7 +42,7 @@
       </div>
 
       <!-- SidebarSearch Form -->
-      <div class="form-inline">
+      {{-- <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
@@ -51,7 +51,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> --}}
 
       <!-- Sidebar Menu -->
       @include('partials.sidebar')
@@ -107,13 +107,13 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="{{asset('/template/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('/admin/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{asset('/template/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('/admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('/template/dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('/admin/dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{asset('/template/dist/js/demo.js')}}"></script>
+<script src="{{asset('/admin/dist/js/demo.js')}}"></script>
 @stack('scripts')
 </body>
 </html>

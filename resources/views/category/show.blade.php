@@ -1,11 +1,11 @@
 @extends('dashboard.main')
 
 @section('title')
-Home Pages
+Category Post
 @endsection
 
 @section('content')
-@forelse ($question as $key=>$value )
+@forelse ($category->question as $value )
 <div class="card card-widget">
     <div class="card-header">
       <div class="user-block">
@@ -35,7 +35,7 @@ Home Pages
       <p>{!! $value->content !!}</p>
       <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i> Share</button>
       <button type="button" class="btn btn-default btn-sm"><i class="far fa-thumbs-up"></i> Like</button>
-      <a href="#" class="float-right btn btn-outline-primary rounded-pill" class="rounded-pill"><span class="glyphicon glyphicon-ok"></span> Jawab</a>
+      <a href="/question/{{$value->id}}" class="float-right btn btn-outline-primary rounded-pill" class="rounded-pill"><span class="glyphicon glyphicon-ok"></span> Jawab</a>
     </div>
     <!-- /.card-body -->    
     <!-- /.card-footer -->
@@ -44,43 +44,4 @@ Home Pages
 @endforelse
 
 
-
-
-
-{{-- <div class="card">
-    <div class="card-header">
-        <h3 class="card-title">Beranda</h3>        
-    </div>
-    <div class="card-body">
-    <a href="#" class="btn btn-primary mb-2">Tambah</a>   
-    <table class="table table-hover">
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Content</th>
-            <th scope="col">image</th>
-            <th scope="col">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>
-                <a href="#" class="btn btn-info">Show</a>
-                <a href="#" class="btn btn-primary">Edit</a>
-            </td>
-            </tr>
-        </tbody>
-        </table>
-    </div>
-    <!-- /.card-body -->
-    <div class="card-footer">
-        
-    </div>
-    <!-- /.card-footer-->
-</div> --}}
 @endsection

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Route;
@@ -16,36 +17,15 @@ use App\Http\Controllers\BerandaController;
 |
 */
 
-Route::get('/dashboard', function(){
-    return view('home.index');
-});
-
-Route::get('/profile', function(){
-    return view('profile.index');
+Route::get('/index', function(){    
+    return view('beranda.index');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', function(){
-    return view('halaman.home');
-    return view('home.index');
-});
+Route::get('/', [QuestionController::class, 'getAll']);
 
-Route::get('/profile', function(){
-    return view('profile.index');
-});
+Route::resource('profile', ProfileController::class);
+Route::resource('category', CategoryController::class);
+Route::resource('question', QuestionController::class);
 
-Route::get('/category', function(){
-    return view('category.index');
-});
-
-Route::get('/category/create', function(){
-    return view('category.create');
-});
-
-Route::post('/category/create', function(){
-    return view('category.store');
-});
-
-Route::get('/category/1/edit', function(){
-    return view('category.update');
-});
+Auth::routes();
