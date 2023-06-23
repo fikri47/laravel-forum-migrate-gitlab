@@ -23,6 +23,10 @@ Route::get('/', function(){
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', function(){
+    return view('halaman.home');
+});
 
-//Beranda
-Route::get('/', [BerandaController::class, 'index']);
+Route::get('/profile', function(){
+    return view('halaman.profile');
+});
