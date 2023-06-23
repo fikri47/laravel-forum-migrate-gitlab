@@ -9,8 +9,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('/admin/plugins/fontawesome-free/css/all.min.css')}}">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="{{asset('admin/plugins/select2/css/select2.min.css')}}">
+  <link rel="stylesheet" href="{{asset('admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('/admin/dist/css/adminlte.min.css')}}">
+
 </head>
 @stack('styles')
 
@@ -122,10 +126,51 @@
 <script src="{{asset('/admin/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{asset('/admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!-- bs-custom-file-input -->
+<script src="{{asset('/admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('/admin/dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('/admin/dist/js/demo.js')}}"></script>
+<!-- TinyMCE -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<!-- Select2 -->
+<script src="{{asset('/admin/plugins/select2/js/select2.full.min.js')}}"></script>
+
 @stack('scripts')
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
+
+    //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+  });
+  $(function () {
+  bsCustomFileInput.init();
+});
+</script>
+<script type="text/javascript">
+    tinymce.init({
+    selector: 'textarea.tinymce-editor',
+    height: 300,
+    menubar: false,
+    plugins: [
+      'advlist autolink lists link image charmap print preview anchor',
+      'searchreplace visualblocks code fullscreen',
+      'insertdatetime media table paste code help wordcount', 'image'
+    ],
+    toolbar: 'undo redo | formatselect | ' +
+      'bold italic backcolor | alignleft aligncenter ' +
+      'alignright alignjustify | bullist numlist outdent indent | ' +
+      'removeformat | help',
+    content_css: '//www.tiny.cloud/css/codepen.min.css'
+    });
+</script>
+
+
 </body>
 </html>

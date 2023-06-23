@@ -17,7 +17,7 @@ Profile Pages
               <div class="card-body box-profile">
                 <div class="text-center">
                   <img class="profile-user-img img-fluid img-circle"
-                       src={{$detailProfile->getAvatar()}}
+                       src="{{$detailProfile->getAvatar()}}"
                        alt="User profile picture">
                 </div>
 
@@ -76,7 +76,7 @@ Profile Pages
                       </div>                                            
                       <div class="form-group row">
                         <div class="offset-sm-2 col-sm-10">
-                          <button type="submit" class="btn btn-danger">Submit</button>
+                          <button type="submit" class="btn btn-success">Update</button>
                         </div>
                       </div>
                     </form>

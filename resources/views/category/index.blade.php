@@ -44,7 +44,7 @@ Category
                                 <form action="/category/{{$value->id}}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <input type="submit" class="btn btn-danger" onlclick="showAlert()"value="Delete">
+                                    <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to delete this category!');" value="Delete">
                                 </form>                            
                             @endauth
                             </div>

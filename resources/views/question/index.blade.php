@@ -19,30 +19,48 @@ Question Box
         </div>
     </div>
     <div class="card-body">
-    <a href="#" class="btn btn-success mb-2">Add Question</a>   
-    <table class="table table-hover">
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Content</th>
-            <th scope="col">image</th>
-            <th scope="col">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>
-                <a href="#" class="btn btn-info">Show</a>
-                <a href="#" class="btn btn-primary">Edit</a>
-            </td>
-            </tr>
-        </tbody>
-        </table>
+        @auth
+        <a href="/question/create" class="btn btn-primary mb-2">Add Question</a>   
+        @endauth
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Content</th>
+                    <th scope="col">image</th>
+                    <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @forelse ($question as $key=>$value)
+                    <tr >
+                        <td>{{$key + 1}}</th>
+                        <td>{{$value->title}}</td>
+                        <td>{{$value->content}}</td>
+                        <td>{{$value->image}}</td>
+                        <td>                            
+                            <div class="d-flex ">
+                            @auth                            
+                            <a href="/question/{{$value->id}}/edit" class="btn btn-primary mr-2">Edit</a>
+                                <form action="/question/{{$value->id}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to delete this question!');" value="Delete">
+                                </form>                            
+                            @endauth
+                            </div>
+                        </td>                      
+                    </tr>
+                @empty
+                    <tr colspan="3">
+                        <td>No data</td>
+                    </tr>  
+                @endforelse
+                </tbody>
+            </table>
+        </div>
     </div>
     <!-- /.card-body -->
     <div class="card-footer">

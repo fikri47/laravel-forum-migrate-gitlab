@@ -29,7 +29,7 @@ class QuestionController extends Controller
     {
         $user = Auth::id();
         $question = Question::where('user_id', $user)->get();
-        return view('', ['question'=>$question]);        
+        return view('question.index', ['question'=>$question]);        
 
     }
 
@@ -41,7 +41,7 @@ class QuestionController extends Controller
     public function create()
     {
         $category = Category::get();
-        return view('', compact('category'));
+        return view('question.create', compact('category'));
     }
 
     /**
@@ -86,7 +86,7 @@ class QuestionController extends Controller
     public function show($id)
     {
         $question = Question::find($id);
-        return view('', compact('question'));
+        return view('question.show', compact('question'));
     }
 
     /**
@@ -99,7 +99,7 @@ class QuestionController extends Controller
     {
         $question = Question::find($id);
         $category = Category::get();
-        return view('', ['question'=>$question, 'category'=>$category]);
+        return view('question.update', ['question'=>$question, 'category'=>$category]);
     }
 
     /**
