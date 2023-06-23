@@ -16,8 +16,8 @@ use App\Http\Controllers\BerandaController;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.auth');
+Route::get('/', function(){
+    return view('halaman.home');
 });
 
 Auth::routes();
