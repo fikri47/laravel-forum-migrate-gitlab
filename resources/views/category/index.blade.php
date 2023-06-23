@@ -1,13 +1,13 @@
 @extends('dashboard.main')
 
 @section('title')
-Home Pages
+Category
 @endsection
 
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">Beranda</h3>
+        <h3 class="card-title">List Category</h3>
 
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -19,26 +19,24 @@ Home Pages
         </div>
     </div>
     <div class="card-body">
-    <a href="#" class="btn btn-primary mb-2">Tambah</a>   
+    <a href="/category/create" class="btn btn-primary mb-2">Add New</a>   
     <table class="table table-hover">
         <thead>
             <tr>
             <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Content</th>
-            <th scope="col">image</th>
+            <th scope="col">Name</th>
             <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
             <tr>
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>Makanan</td>
             <td>
-                <a href="#" class="btn btn-info">Show</a>
-                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="/category/1/edit" class="btn btn-success">Edit</a>
+                <form action="">
+                    <button href="/category/1/destroy" class="btn btn-danger" onclick="return confirm('Are you sure to delete this category?');">Delete</button>
+                </form>
             </td>
             </tr>
         </tbody>
