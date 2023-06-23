@@ -16,20 +16,14 @@ use App\Http\Controllers\BerandaController;
 |
 */
 
-<<<<<<< HEAD
-Route::get('/', function(){
-    return view('halaman.home');
-=======
 Route::get('/dashboard', function(){
     return view('home.index');
->>>>>>> 40d14bd021f11368669135041019088d4fcad3f1
 });
 
 Route::get('/profile', function(){
     return view('profile.index');
 });
 
-<<<<<<< HEAD
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', function(){
     return view('halaman.home');
@@ -40,8 +34,6 @@ Route::get('/profile', function(){
     return view('profile.index');
 });
 
-=======
->>>>>>> 40d14bd021f11368669135041019088d4fcad3f1
 Route::get('/category', function(){
     return view('category.index');
 });
