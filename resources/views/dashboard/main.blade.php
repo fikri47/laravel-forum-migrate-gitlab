@@ -36,9 +36,21 @@
         <div class="image">
           <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
-        <div class="info">
-          <a href="/profile" class="d-block">User Profile</a>
-        </div>
+        @guest
+          @if (Route::has('login'))
+            <div class="info">
+              <a href="/profile" class="d-block">
+                Guest
+              </a>
+            </div>
+            @endif
+          @else
+            <div class="info">
+              <a href="/profile" class="d-block">
+                {{ Auth::user()->name }}
+              </a>
+            </div>
+        @endguest
       </div>
 
       <!-- SidebarSearch Form -->
@@ -95,7 +107,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.2.0
     </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; {{ now()->year }} <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->

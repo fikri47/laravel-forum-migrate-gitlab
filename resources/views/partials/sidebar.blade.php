@@ -3,7 +3,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="/" class="nav-link">
+            <a href="/dashboard" class="nav-link {{ ($active === 'dashboard') ? 'active' : '' }}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Home
@@ -11,15 +11,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/category" class="nav-link">
+            <a href="/category" class="nav-link {{ ($active === 'category') ? 'active' : '' }}">
               <i class="nav-icon fas fa-th"></i>
               <p>
               Category
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li class="nav-item {{ ($menu) ? 'menu-open' : '' }}">
+            <a href="" class="nav-link ">
               <i class="nav-icon far fa-envelope"></i>
               <p>
                 Question Box
@@ -28,7 +28,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../mailbox/mailbox.html" class="nav-link">
+                <a href="/question" class="nav-link {{ ($active === 'inbox') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Inbox</p>
                 </a>
@@ -42,10 +42,34 @@
               <li class="nav-item">
                 <a href="../mailbox/read-mail.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Read</p>
+                  <p>Reply</p>
                 </a>
               </li>
             </ul>
           </li>
+          @guest
+            @if (Route::has('login'))
+            <li class="nav-item">
+              <a href="{{ route('login') }}" class="nav-link">
+                <i class="nav-icon fa fa-sign-out-alt"></i>
+                <p>
+                Login
+                </p>
+              </a>
+            </li>
+            @endif
+          @else
+          <li class="nav-item bg-danger mt-4">
+              <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <i class="nav-icon fa fa-sign-out-alt"></i>
+                <p>
+                Logout
+                </p>
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+              </form>
+            </li>
+            @endguest
         </ul>
       </nav>
