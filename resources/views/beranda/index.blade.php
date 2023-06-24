@@ -76,7 +76,7 @@
                     <input class="form-control mb-2 border-light fs-1" type="email" placeholder="Ajukan Pertanyaanmu?" />
                   </div>
                   <div class="col-auto mt-2 mt-lg-0">
-                    <button class="btn btn-success text-dark fs-1"><i class="bi bi-search"></i></button>
+                    <a href="/index" class="btn btn-success text-dark fs-1"><i class="bi bi-search"></i></a>
                   </div>                  
                 </div>
               </div>

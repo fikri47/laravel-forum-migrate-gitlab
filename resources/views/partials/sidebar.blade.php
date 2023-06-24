@@ -3,7 +3,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="/" class="nav-link">
+            <a href="/index" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Home
@@ -60,7 +60,7 @@
           @guest
             @if (Route::has('login'))
             <li class="nav-item">
-              <a href="{{ route('login') }}" class="nav-link">
+              <a href="{{ route('login') }}" class="nav-link bg-success mt-3">
                 <i class="nav-icon fa fa-sign-out-alt"></i>
                 <p>
                 Login

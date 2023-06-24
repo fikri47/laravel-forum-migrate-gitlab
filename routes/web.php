@@ -17,12 +17,12 @@ use App\Http\Controllers\BerandaController;
 |
 */
 
-Route::get('/index', function(){    
+Route::get('/', function(){    
     return view('beranda.index');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', [QuestionController::class, 'getAll']);
+Route::get('/index', [QuestionController::class, 'getAll']);
 
 Route::resource('profile', ProfileController::class);
 Route::resource('category', CategoryController::class);
