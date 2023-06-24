@@ -29,7 +29,7 @@ Question Box
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
                     <th scope="col">Content</th>
-                    <th scope="col">image</th>
+                    <th scope="col">Category</th>
                     <th scope="col">Actions</th>
                     </tr>
                 </thead>
