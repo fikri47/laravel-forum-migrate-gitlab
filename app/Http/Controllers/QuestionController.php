@@ -19,11 +19,7 @@ class QuestionController extends Controller
      public function __construct() {
         $this->middleware('auth')->except(['getAll']);
      }
-
-    public function getAll() {
-        $question = Question::orderBy('created_at', 'DESC')->get();
-        return view('home.index', compact('question'));
-    }
+        
 
     public function index()
     {
@@ -61,18 +57,22 @@ class QuestionController extends Controller
 
         $user = Auth::id();
 
-        $filename = time(). '.' .$request->image->extension();
-        $request->image->move(public_path('image'), $filename);
+        $filename = null;
+
+        if ($request->hasFile('image')) {
+            $filename = time(). '.' .$request->image->extension();
+            $request->image->move(public_path('image'), $filename);
+        }
 
         $question = new Question();
         $question -> title = $request->title;
-        $question -> content = $request->content;
+        $question -> content = strip_tags($request->content);
         $question -> user_id = $user;
         $question -> image = $filename;
         $question -> category_id = $request->category;
         $question->save();        
 
-        return redirect('/question');
+        return redirect('question');
 
 
     }
@@ -118,7 +118,8 @@ class QuestionController extends Controller
             'image' => 'image|mimes:png,jpg'
         ]);
 
-        $question = Question::find($id);        
+        $question = Question::find($id);       
+        $filename = null; 
 
         if($request->hasFile('image')) {
             $path = 'image/';
@@ -132,7 +133,7 @@ class QuestionController extends Controller
         }
         
           $question -> title = $request->title;
-          $question -> content = $request->content;                    
+          $question -> content = strip_tags($request->content);                    
           $question -> category_id = $request->category;
           $question->update();
 
@@ -152,4 +153,10 @@ class QuestionController extends Controller
 
         return redirect('question');
     }
+
+    public function getAll() {
+        $question = Question::orderBy('created_at', 'DESC')->get();
+        return view('home.index', compact('question'));
+    }
+
 }

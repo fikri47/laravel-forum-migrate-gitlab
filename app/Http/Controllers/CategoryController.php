@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
 {
@@ -44,7 +45,7 @@ class CategoryController extends Controller
             'name' => $request->name,   
         ]);
 
-        return redirect('category');
+        return redirect('category')->with('success', 'Task Created Successfully!');
     }
 
     /**
@@ -88,7 +89,7 @@ class CategoryController extends Controller
         $category->name = $request->name;
         $category->update();
 
-        return redirect('category');
+        return redirect('category')->with('success', 'Task Created Successfully!');
     }
 
     /**
@@ -99,8 +100,9 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        $category = Category::find($id);
+        $category = Category::find($id);    
         $category->delete();
+        Alert::success('Deleted!', 'Your item has been deleted.');
         return back();
     }
 }

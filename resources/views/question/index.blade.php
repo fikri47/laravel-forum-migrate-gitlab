@@ -34,14 +34,16 @@ Question Box
                     </tr>
                 </thead>
                 <tbody>
+                @if ($item->user->id == auth::user()->id)
                 @forelse ($question as $key=>$value)
                     <tr >
                         <td>{{$key + 1}}</th>
                         <td>{{$value->title}}</td>
-                        <td>{{$value->content}}</td>
-                        <td>{{$value->image}}</td>
+                        <td>{!! $value->content!!}</td>
+                        <td>{{$value->category->name}}</td>
                         <td>                            
                             <div class="d-flex ">
+                            <a href="/question/{{$value->id}}" class="btn btn-info mr-2" >Show</a>
                             @auth                            
                             <a href="/question/{{$value->id}}/edit" class="btn btn-primary mr-2">Edit</a>
                                 <form action="/question/{{$value->id}}" method="POST">

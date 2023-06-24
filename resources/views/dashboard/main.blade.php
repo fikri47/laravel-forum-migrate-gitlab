@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< Updated upstream
   <title>FOURDI</title>
+=======
+  <title>Fourdi</title>
+>>>>>>> Stashed changes
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -22,6 +26,7 @@
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
+  @include('sweetalert::alert')
   <!-- Navbar -->
   @include('partials.nav')
   <!-- /.navbar -->
@@ -29,11 +34,17 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
+<<<<<<< Updated upstream
     <a href="/index" class="brand-link">
       <!-- <img src="{{asset('admin/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
       <i class="bi bi-chat-dots ml-4"></i>
       <span class="brand-text font-weight-bold ml-2">FOURDI
       </span>
+=======
+    <a href="#" class="brand-link">
+      <img src="{{asset("image/logo_chat_putih-removebg-preview.png")}}" alt="Fourdi" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Fourdi</span>
+>>>>>>> Stashed changes
     </a>
 
     <!-- Sidebar -->
@@ -137,7 +148,7 @@
 <script src="{{asset('/admin/dist/js/demo.js')}}"></script>
 <!-- TinyMCE -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/1z9y4ve9lvlb6sxrl0s0mejx992tb8bvwdxrgd870gm6usv1/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <!-- Select2 -->
 <script src="{{asset('/admin/plugins/select2/js/select2.full.min.js')}}"></script>
 
@@ -159,10 +170,11 @@
 <script type="text/javascript">
     tinymce.init({
     selector: 'textarea.tinymce-editor',
+    autosave_restore_when_empty: true,    
     height: 300,
     menubar: false,
     plugins: [
-      'advlist autolink lists link image charmap print preview anchor',
+      'advlist autolink lists link charmap print preview anchor',
       'searchreplace visualblocks code fullscreen',
       'insertdatetime media table paste code help wordcount', 'image'
     ],

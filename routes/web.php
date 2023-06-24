@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionController;
@@ -29,3 +30,8 @@ Route::resource('category', CategoryController::class);
 Route::resource('question', QuestionController::class);
 
 Auth::routes();
+
+Route::post('/answer/{question_id}', [AnswerController::class, 'store']);
+
+Route::delete('/answer/{answer}', [AnswerController::class, 'delete'])->name('answer.delete');
+Route::put('/answer/{answer_id}', [AnswerController::class, 'update'])->name('answer.update');

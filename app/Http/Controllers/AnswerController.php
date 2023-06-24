@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Answer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AnswerController extends Controller
 {
@@ -26,5 +27,22 @@ class AnswerController extends Controller
         $answer->save();
 
         return redirect('/question/'. $id);
+    }
+
+    public function update(Request $request, Answer $answer)
+    {
+        if (Auth::user()->id == $answer->user_id) {
+            $answer->update($request->all());
+        }
+
+        return back();
+    }
+
+    public function delete(Answer $answer) {
+        if (Auth::user()->id == $answer->user_id) {
+            $answer->delete();
+        }
+    
+        return back();
     }
 }

@@ -40,46 +40,32 @@
               <li class="nav-item">
                 <a href="/question" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Inbox</p>
+                  <p>Pertanyaan</p>
                 </a>
-              </li>
-              <li class="nav-item">
-                <a href="../mailbox/compose.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Compose</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../mailbox/read-mail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Reply</p>
-                </a>
-              </li>
+              </li>              
             </ul>
-          </li>
-          @guest
-            @if (Route::has('login'))
-            <li class="nav-item">
-              <a href="{{ route('login') }}" class="nav-link bg-success mt-3">
-                <i class="nav-icon fa fa-sign-out-alt"></i>
-                <p>
-                Login
-                </p>
-              </a>
-            </li>
-            @endif
-          @else
-          <li class="nav-item bg-danger mt-4">
-              <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <i class="nav-icon fa fa-sign-out-alt"></i>
-                <p>
-                Logout
-                </p>
-              </a>
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-              </form>
-            </li>
-            @endguest
-        </ul>
+            @guest
+              @if (Route::has('login'))
+              <li class="nav-item">
+                <a href="{{ route('login') }}" class="nav-link">
+                  <i class="nav-icon fa fa-sign-out-alt"></i>
+                  <p>
+                  Login
+                  </p>
+                </a>
+              </li>
+              @endif
+            @else
+            <li class="nav-item bg-danger mt-4">
+                <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                  <i class="nav-icon fa fa-sign-out-alt"></i>
+                  <p>
+                  Logout
+                  </p>
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf
+                </form>
+              </li>
+              @endguest
       </nav>
