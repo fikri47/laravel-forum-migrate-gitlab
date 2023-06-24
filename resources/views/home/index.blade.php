@@ -41,5 +41,6 @@ Home Pages
     <!-- /.card-footer -->
   </div>
 @empty
+<h1>Tidak Ada Pertanyaan</h1>
 @endforelse
 @endsection

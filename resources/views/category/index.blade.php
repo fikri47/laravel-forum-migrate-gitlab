@@ -83,13 +83,14 @@ Category
                         <td>                            
                             <div class="d-flex ">
                             <a href="/category/{{$value->id}}" class="btn btn-info mr-2" >Show</a>
-                            @auth                            
+                            @auth                                                        
                             <a href="/category/{{$value->id}}/edit" class="btn btn-primary mr-2">Edit</a>
-                                <form action="/category/{{$value->id}}" method="POST" >
-                                    @csrf
-                                    @method('DELETE')
-                                    <input type="submit" class="btn btn-danger" value="Delete">
-                                </form>                            
+                                
+                            <form action="/category/{{$value->id}}" method="POST" >
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" class="btn btn-danger" value="Delete">
+                            </form>                                                        
                             @endauth
                             </div>
                         </td>                      

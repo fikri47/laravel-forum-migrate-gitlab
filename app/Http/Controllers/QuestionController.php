@@ -72,7 +72,7 @@ class QuestionController extends Controller
         $question -> category_id = $request->category;
         $question->save();        
 
-        return redirect('question');
+        return redirect('question')->with('success', 'Task Created Successfully!');
 
 
     }
@@ -137,7 +137,7 @@ class QuestionController extends Controller
           $question -> category_id = $request->category;
           $question->update();
 
-          return redirect('question');
+          return redirect('question')->with('success', 'Task Created Successfully!');
     }
 
     /**
@@ -151,7 +151,7 @@ class QuestionController extends Controller
         $question = Question::find($id);
         $question->delete();
 
-        return redirect('question');
+        return redirect('question')->with('success', 'Task Created Successfully!');
     }
 
     public function getAll() {

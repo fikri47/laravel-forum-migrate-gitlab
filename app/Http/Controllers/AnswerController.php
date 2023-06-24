@@ -35,14 +35,13 @@ class AnswerController extends Controller
             $answer->update($request->all());
         }
 
-        return back();
+        return back()->withSuccess('Task Created Successfully!');
     }
 
     public function delete(Answer $answer) {
         if (Auth::user()->id == $answer->user_id) {
-            $answer->delete();
+            $answer->delete();            
         }
-    
-        return back();
+        return back()->withSuccess('Task Created Successfully!');
     }
 }

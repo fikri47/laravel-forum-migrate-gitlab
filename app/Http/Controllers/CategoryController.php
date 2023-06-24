@@ -101,8 +101,7 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         $category = Category::find($id);    
-        $category->delete();
-        Alert::success('Deleted!', 'Your item has been deleted.');
-        return back();
+        $category->delete();        ;
+        return back()->with('success', 'Task Created Successfully!');
     }
 }

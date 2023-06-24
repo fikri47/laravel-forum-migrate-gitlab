@@ -47,7 +47,7 @@ class ProfileController extends Controller
         $profile -> address = $request->address;
         $profile->update();        
 
-        return redirect('profile');
+        return redirect('profile')->with('success', 'Task Created Successfully!');
 
     }
 
