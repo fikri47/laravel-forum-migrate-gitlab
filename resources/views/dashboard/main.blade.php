@@ -3,11 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< Updated upstream
   <title>FOURDI</title>
-=======
-  <title>Fourdi</title>
->>>>>>> Stashed changes
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -34,17 +30,9 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-<<<<<<< Updated upstream
-    <a href="/index" class="brand-link">
-      <!-- <img src="{{asset('admin/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
-      <i class="bi bi-chat-dots ml-4"></i>
-      <span class="brand-text font-weight-bold ml-2">FOURDI
-      </span>
-=======
     <a href="#" class="brand-link">
       <img src="{{asset("image/logo_chat_putih-removebg-preview.png")}}" alt="Fourdi" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Fourdi</span>
->>>>>>> Stashed changes
     </a>
 
     <!-- Sidebar -->

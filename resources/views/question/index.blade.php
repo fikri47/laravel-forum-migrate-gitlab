@@ -33,8 +33,7 @@ Question Box
                     <th scope="col">Actions</th>
                     </tr>
                 </thead>
-                <tbody>
-                @if ($item->user->id == auth::user()->id)
+                <tbody>                
                 @forelse ($question as $key=>$value)
                     <tr >
                         <td>{{$key + 1}}</th>
